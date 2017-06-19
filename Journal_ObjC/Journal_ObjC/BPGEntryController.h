@@ -13,6 +13,8 @@
 
 #pragma mark - Properties
 
++ (BPGEntryController *)sharedInstance;
+
 @property (nonatomic, strong, readonly) NSArray *entries;
 
 #pragma mark - CRUD
