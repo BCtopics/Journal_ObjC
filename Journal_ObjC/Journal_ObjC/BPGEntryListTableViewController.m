@@ -8,6 +8,8 @@
 
 #import "BPGEntryListTableViewController.h"
 #import "BPGEntryController.h"
+#import "BPGEntry.h"
+#import "BPGEntryDetailViewController.m"
 
 @interface BPGEntryListTableViewController ()
 
@@ -46,14 +48,21 @@
     }
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+   
+    if ([segue.identifier isEqualToString:@"toViewEntry"]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        BPGEntry *entry = [BPGEntryController sharedInstance].entries[indexPath.row];
+        
+        BPGEntryDetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.entry = entry;
+    }
+    
 }
-*/
+
 
 @end
