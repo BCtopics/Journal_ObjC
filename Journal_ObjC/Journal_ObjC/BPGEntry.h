@@ -14,7 +14,11 @@
                          text:(NSString *)text
                     timestamp:(NSDate *)timestamp;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 #pragma mark - Properties
+
+- (NSDictionary *)dictionaryRepresentation;
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *bodytext;

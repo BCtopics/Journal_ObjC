@@ -19,6 +19,7 @@
 
 #pragma mark - CRUD
 
+- (void)saveToPersistentStorage;
 - (void)addEntriesObject:(BPGEntry *)entry;
 - (void)removeEntriesObject:(BPGEntry *)entry;
 
