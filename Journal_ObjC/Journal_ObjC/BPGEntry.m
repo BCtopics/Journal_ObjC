@@ -10,6 +10,10 @@
 
 @implementation BPGEntry
 
+static NSString *const TitleKey = @"title";
+static NSString *const TextKey = @"text";
+static NSString *const TimestampKey = @"timestamp";
+
 #pragma mark - Initializers
 
 - (instancetype)initWithTitle:(NSString *)title
@@ -23,6 +27,21 @@
         _timestamp = timestamp;
     }
     return self;
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSString *title = dictionary[TitleKey];
+    NSString *text = dictionary[TextKey];
+    NSDate *timestamp = dictionary[TimestampKey];
+    return [self initWithTitle:title text:text timestamp:timestamp];
+}
+
+- (NSDictionary *)dictionaryRepresentation
+{
+    return @{TitleKey: self.title,
+             TextKey: self.bodytext,
+             TimestampKey: self.timestamp};
 }
 
 @end

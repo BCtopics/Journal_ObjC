@@ -12,8 +12,6 @@
 
 @interface BPGEntryDetailViewController ()
 
-@property (strong, nonatomic) BPGEntry *entry;
-
 #pragma mark - IBOutlets
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;

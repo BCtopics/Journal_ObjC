@@ -9,7 +9,7 @@
 #import "BPGEntryListTableViewController.h"
 #import "BPGEntryController.h"
 #import "BPGEntry.h"
-#import "BPGEntryDetailViewController.m"
+#import "BPGEntryDetailViewController.h"
 
 @interface BPGEntryListTableViewController ()
 

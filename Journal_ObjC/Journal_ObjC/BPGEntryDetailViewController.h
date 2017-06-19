@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BPGEntry.h"
 
 @interface BPGEntryDetailViewController : UIViewController
+
+@property (strong, nonatomic) BPGEntry *entry;
 
 @end
