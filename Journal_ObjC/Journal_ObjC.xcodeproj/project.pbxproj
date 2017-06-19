@@ -16,6 +16,7 @@
 		6B8824781EF863D300A1203A /* BPGEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8824771EF863D300A1203A /* BPGEntry.m */; };
 		6B88247E1EF865FE00A1203A /* BPGEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B88247D1EF865FE00A1203A /* BPGEntryController.m */; };
 		6B8824811EF86A8400A1203A /* BPGEntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8824801EF86A8400A1203A /* BPGEntryListTableViewController.m */; };
+		6B8824841EF86E5900A1203A /* BPGEntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8824831EF86E5900A1203A /* BPGEntryDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		6B88247D1EF865FE00A1203A /* BPGEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPGEntryController.m; sourceTree = "<group>"; };
 		6B88247F1EF86A8400A1203A /* BPGEntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPGEntryListTableViewController.h; sourceTree = "<group>"; };
 		6B8824801EF86A8400A1203A /* BPGEntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPGEntryListTableViewController.m; sourceTree = "<group>"; };
+		6B8824821EF86E5900A1203A /* BPGEntryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPGEntryDetailViewController.h; sourceTree = "<group>"; };
+		6B8824831EF86E5900A1203A /* BPGEntryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPGEntryDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 			children = (
 				6B88247F1EF86A8400A1203A /* BPGEntryListTableViewController.h */,
 				6B8824801EF86A8400A1203A /* BPGEntryListTableViewController.m */,
+				6B8824821EF86E5900A1203A /* BPGEntryDetailViewController.h */,
+				6B8824831EF86E5900A1203A /* BPGEntryDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			files = (
 				6B88244E1EF862DE00A1203A /* AppDelegate.m in Sources */,
 				6B8824811EF86A8400A1203A /* BPGEntryListTableViewController.m in Sources */,
+				6B8824841EF86E5900A1203A /* BPGEntryDetailViewController.m in Sources */,
 				6B8824781EF863D300A1203A /* BPGEntry.m in Sources */,
 				6B88247E1EF865FE00A1203A /* BPGEntryController.m in Sources */,
 				6B88244B1EF862DE00A1203A /* main.m in Sources */,

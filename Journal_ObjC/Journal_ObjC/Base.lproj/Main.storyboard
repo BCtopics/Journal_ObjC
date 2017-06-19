@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,12 +43,85 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5dZ-23-9Sf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zvV-Ja-AsI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zvV-Ja-AsI">
+                            <connections>
+                                <segue destination="Yju-Q1-QfP" kind="show" id="kzV-IB-OqG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZA-37-DwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="-180.35982008995504"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="M12-k2-LVO">
+            <objects>
+                <viewController id="Yju-Q1-QfP" customClass="BPGEntryDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vQq-uM-xc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ac-So-pyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zmw-O8-GLb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yme-cn-BDP">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Yju-Q1-QfP" id="JeO-Mq-DDG"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hO6-eO-PTP">
+                                <rect key="frame" x="16" y="122" width="343" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lq-9U-Skh">
+                                <rect key="frame" x="16" y="607" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GKO-XJ-1XM"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="Yju-Q1-QfP" eventType="touchUpInside" id="fUG-QC-iTw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7lq-9U-Skh" firstAttribute="top" secondItem="hO6-eO-PTP" secondAttribute="bottom" constant="21" id="1NZ-9u-u2e"/>
+                            <constraint firstItem="hO6-eO-PTP" firstAttribute="top" secondItem="yme-cn-BDP" secondAttribute="bottom" constant="20" id="2SG-Hm-uOm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yme-cn-BDP" secondAttribute="trailing" id="5ay-S3-UAc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hO6-eO-PTP" secondAttribute="trailing" id="Bbh-NN-tES"/>
+                            <constraint firstItem="hO6-eO-PTP" firstAttribute="leading" secondItem="zmw-O8-GLb" secondAttribute="leadingMargin" id="ToM-PX-O1P"/>
+                            <constraint firstItem="7ac-So-pyn" firstAttribute="top" secondItem="7lq-9U-Skh" secondAttribute="bottom" constant="10" id="ZHY-2X-qBI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7lq-9U-Skh" secondAttribute="trailing" id="gYw-94-wWE"/>
+                            <constraint firstItem="7lq-9U-Skh" firstAttribute="leading" secondItem="zmw-O8-GLb" secondAttribute="leadingMargin" id="j7K-J2-gIY"/>
+                            <constraint firstItem="yme-cn-BDP" firstAttribute="leading" secondItem="zmw-O8-GLb" secondAttribute="leadingMargin" id="kDO-if-LfS"/>
+                            <constraint firstItem="yme-cn-BDP" firstAttribute="top" secondItem="vQq-uM-xc4" secondAttribute="bottom" constant="8" id="vf6-Zd-aRs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="vHW-zq-cyf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="a26-Us-xET">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Yju-Q1-QfP" id="3ix-wg-TcX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="hO6-eO-PTP" id="kvp-Tu-NPJ"/>
+                        <outlet property="titleTextField" destination="yme-cn-BDP" id="UHZ-mS-dTW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZL-ZM-Rpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="-180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ThC-NK-UvO">
